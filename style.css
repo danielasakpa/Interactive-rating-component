@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --orange: hsl(25, 97%, 53%);
+  --container-bg: #1f2630;
+  --body-font: "Overpass", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 0.9rem;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  line-height: 1.5;
+  font-family: var(--body-font);
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.2em;
+  color: var(--light-grey);
+  margin-top: 1em;
+}
+
+main {
+  max-width: 32em;
+  height: 33em;
+  align-self: center;
+  background-color: var(--container-bg);
+  color: var(--white);
+  padding: 3em;
+  border-radius: 20px;
+  position: relative;
+}
+
+.circles {
+  background-color: var(--dark-blue);
+  color: var(--light-grey);
+  cursor: pointer;
+  padding: 8px;
+  width: 4em;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.content {
+  line-height: 1.6;
+}
+
+.select-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.numbers {
+  border: none;
+}
+
+.numbers:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.numbers:focus {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.btn {
+  position: absolute;
+  font-size: 1.5em;
+  width: calc(110% - 110px);
+  cursor: pointer;
+  left: 50%;
+  display: inline-block;
+  transform: translate(-50%, 0);
+  padding: 10px;
+  text-align: center;
+  background-color: var(--orange);
+  bottom: 25px;
+  border-radius: 50px;
+}
+
+#btn-link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.front-section.hide-card {
+  display: none;
+}
+
+.thankyou-section {
+  text-align: center;
+  display: none;
+}
+
+.thankyou-section.show-card {
+  display: block;
+}
+
+.thankyou-img {
+  margin: 0 auto;
+}
+
+.selected {
+  color: var(--orange);
+  margin: 1em auto;
+  background-color: var(--dark-blue);
+  padding: 0.5em;
+  width: max-content;
+  border-radius: 15px;
+}
+
+.thanks {
+  margin-top: 1em;
+}
+
+.thankyou-content {
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 424px) {
+  main {
+    margin: 0 15px;
+  }
+
+  .circles {
+    width: 3em;
+    height: 3em;
+  }
+}
